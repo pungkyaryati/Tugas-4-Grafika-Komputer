@@ -13,20 +13,20 @@ public:
 	Demo();
 	~Demo();
 private:
+	GLuint shadowmapShader, cubeVBO, cubeVAO, cubeEBO, cube_texture, planeVBO, planeVAO, planeEBO, plane_texture, stexture, stexture2;
 	GLuint shaderProgram, VBO, VAO, EBO, texture, VBO2, VAO2, EBO2, texture2;
-	float viewCamX, viewCamY, viewCamZ, upCamX, upCamY, upCamZ, posCamX, posCamY, posCamZ, CAMERA_SPEED, fovy;
+	float angle = 0, viewCamX, viewCamY, viewCamZ, upCamX, upCamY, upCamZ, posCamX, posCamY, posCamZ, CAMERA_SPEED, fovy;
 	virtual void Init();
 	virtual void DeInit();
 	virtual void Update(double deltaTime);
 	virtual void Render();
-	virtual void ProcessInput(GLFWwindow *window);
-	void BuildColoredCube();
-	void BuildColoredPlane();
-	void DrawColoredCube();
-	void DrawColoredPlane();
+	virtual void ProcessInput(GLFWwindow* window);
+	void BuildTexturedCube();
+	void BuildTexturedPlane();
+	void DrawTexturedCube();
+	void DrawTexturedPlane();
 	void MoveCamera(float speed);
 	void StrafeCamera(float speed);
 	void RotateCamera(float speed);
 	void InitCamera();
 };
-
