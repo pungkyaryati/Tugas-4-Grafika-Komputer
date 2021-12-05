@@ -81,10 +81,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\GL\simple-opengl-image-library-master\simple-opengl-image-library-master\include;C:\GL\glm-0.9.5.4\glm;C:\GL\glfw-3.3.4.bin.WIN32\glfw-3.3.4.bin.WIN32\include;C:\GL\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>glfw3.lib;SOIL.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>C:\GL\simple-opengl-image-library-master\simple-opengl-image-library-master\libs;C:\GL\glfw-3.3.4.bin.WIN32\glfw-3.3.4.bin.WIN32\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -124,7 +126,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\deps\include\glad\glad.c" />
+    <ClCompile Include="..\..\..\..\..\GL\glad\src\glad.c" />
     <ClCompile Include="Demo.cpp" />
     <ClCompile Include="RenderEngine.cpp" />
   </ItemGroup>
